@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f8f8f8;
+      color: #222;
+      text-align: center;
+      padding: 20px;
+    }
+    #clock {
+      font-size: 40px;
+    }
+  </style>
+</head>
+<body>
+  <div id="clock">00:00:00</div>
+  <script>
+    setInterval(() => {
+      const now = new Date();
+      const time = now.toLocaleTimeString();
+      document.getElementById('clock').innerText = time;
+    }, 1000);
+  </script>
+</body>
+</html>
